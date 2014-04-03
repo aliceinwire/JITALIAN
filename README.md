@@ -8,8 +8,7 @@ Italian - Japanaese Edict dictionary
 
 
 
-is a fork from http://virgo.unive.it/itadict/ that is under Attribution-NonCommercial-ShareAlike CC BY-NC-SA v3.0
-
+is a fork from http://virgo.unive.it/itadict/ that is under <a href=http://virgo.unive.it/itadict/?p=download&l=eng> Attribution-NonCommercial-ShareAlike CC BY-NC-SA v3.0</a>  
 
 I had made some fix.
 
