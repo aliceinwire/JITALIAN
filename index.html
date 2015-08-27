@@ -1,1 +1,9 @@
 hello world
+<script>
+jQuery.getJSON('itadict.txt',function(data){
+    // data is an array of objects
+    $.each(data, function(){
+       console.log(this.title); // log each title
+    });
+});
+</script>
