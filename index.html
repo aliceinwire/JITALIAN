@@ -10,8 +10,24 @@
   <p></p>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript">
-  jQuery.get('./example.txt',function(data){
-    $( "p" ).text( data);
+function htmlForTextWithEmbeddedNewlines(text) {
+    var htmls = [];
+    var lines = text.split(/\n/);
+    // The temporary <div/> is to perform HTML entity encoding reliably.
+    //
+    // document.createElement() is *much* faster than jQuery('<div></div>')
+    // http://stackoverflow.com/questions/268490/
+    //
+    // You don't need jQuery but then you need to struggle with browser
+    // differences in innerText/textContent yourself
+    var tmpDiv = jQuery(document.createElement('div'));
+    for (var i = 0 ; i < lines.length ; i++) {
+        htmls.push(tmpDiv.text(lines[i]).html());
+    }
+    return htmls.join("<br>");
+}
+jQuery.get('https://raw.githubusercontent.com/aliceinwire/JITALIAN/master/example.txt',function(data){
+    $( "p" ).text(htmlForTextWithEmbeddedNewlines(data));
   });
   </script>
 </body>
