@@ -7,7 +7,8 @@
 </head>
 <body>
   <h1>jQuery Dictionary</h1>
-  <p></p>
+  <h2>example search "aori":</h2>
+  <div id="div"></div>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript">
 function htmlForTextWithEmbeddedNewlines(text) {
@@ -24,10 +25,11 @@ function htmlForTextWithEmbeddedNewlines(text) {
     for (var i = 0 ; i < lines.length ; i++) {
         htmls.push(tmpDiv.text(lines[i]).html());
     }
-    return htmls.join("<br>");
+    return htmls.join("</p><p id='search'>");
 }
 jQuery.get('https://raw.githubusercontent.com/aliceinwire/JITALIAN/master/example.txt',function(data){
     $( "p" ).html(htmlForTextWithEmbeddedNewlines(data));
+    $( "#search:contains('aori')" ).css( "text-decoration", "underline" );
   });
   </script>
 </body>
