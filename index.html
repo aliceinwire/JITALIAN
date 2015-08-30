@@ -1,1 +1,22 @@
-hello world
+<script>
+
+</script>
+<html>
+<head>
+  <title>Dictionary reader</title>
+</head>
+<body>
+  <h1>jQuery Dictionary</h1>
+  <p>This is a simple test page</p>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript">
+  jQuery.get('./itadict.txt',function(data){
+    $( "p" ).text( data);
+    // data is an array of objects
+    $.each(data, function(){
+       console.log(this.title); // log each title
+    });
+  });
+  </script>
+</body>
+</html>
