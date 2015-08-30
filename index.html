@@ -27,7 +27,7 @@ function htmlForTextWithEmbeddedNewlines(text) {
     return htmls.join("<br>");
 }
 jQuery.get('https://raw.githubusercontent.com/aliceinwire/JITALIAN/master/example.txt',function(data){
-    $( "p" ).text(htmlForTextWithEmbeddedNewlines(data));
+    $( "p" ).html(htmlForTextWithEmbeddedNewlines(data));
   });
   </script>
 </body>
