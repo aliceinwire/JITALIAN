@@ -28,7 +28,7 @@ function htmlForTextWithEmbeddedNewlines(text) {
     return htmls.join("</p><p id='search'>");
 }
 jQuery.get('https://raw.githubusercontent.com/aliceinwire/JITALIAN/master/example.txt',function(data){
-    $( "p" ).html(htmlForTextWithEmbeddedNewlines(data));
+    $( "#div" ).html(htmlForTextWithEmbeddedNewlines(data));
     $( "#search:contains('aori')" ).css( "text-decoration", "underline" );
   });
   </script>
