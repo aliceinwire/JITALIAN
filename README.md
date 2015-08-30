@@ -3,12 +3,11 @@ JITALIAN
 
 JITALIAN
 
+Italian - Japanaese 
+Japanese - Italian
+Edict dictionary
 
-Italian - Japanaese Edict dictionary
-
-
-
-is a fork from http://virgo.unive.it/itadict/ that is under <a href=http://virgo.unive.it/itadict/?p=download&l=eng> Attribution-NonCommercial-ShareAlike CC BY-NC-SA v3.0</a>  
+This dictionary is adapted from http://virgo.unive.it/itadict/ that is under <a href=http://virgo.unive.it/itadict/?p=download&l=eng> Attribution-NonCommercial-ShareAlike CC BY-NC-SA v3.0</a>  
 
 I'm keeping it update and you are free to contribute and send pull request.
 
